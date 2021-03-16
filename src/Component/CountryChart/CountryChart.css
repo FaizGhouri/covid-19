@@ -1,0 +1,13 @@
+.Chartbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.barChart {
+    width: 90%;
+    border: 5px;
+}

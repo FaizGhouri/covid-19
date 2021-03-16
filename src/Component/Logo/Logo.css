@@ -1,0 +1,122 @@
+.App {
+    display: flex;
+    background-image: linear-gradient(to right, black 10%, rgb(7, 124, 7) 130%);
+    padding: 10px;
+    height: 180px;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('../../Font/Teko-Regular.ttf')
+}
+
+.covid {
+    font-size: 40px;
+    font-family: 'Teko';
+    color: #efefef;
+}
+
+@keyframes sample {
+    10% {
+        background-color: blue;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: green;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: yellow;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: red;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: blue;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.stay {
+    font-size: 20px;
+    color: white;
+    font-family: 'Teko';
+    animation-name: sample;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    margin-top: -50px;
+}
+
+.tay {
+    font-size: 20px;
+    color: white;
+    font-family: 'Teko';
+    margin-top: -50px;
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow-left {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.covid, .stay{
+    opacity: 0;
+    animation: fade-in-right ease 4s forwards;
+}
+
+.tay {
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+    animation-delay: 0.4s;
+}
+
+.stay {
+    animation-delay: 0.8s;
+}
+
+.Corona {
+    /* width: 10%;
+    height: 100px; */
+    height: 25vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .Corona {
+        animation: img-spin infinite 20s linear;
+        /* animation: fade-in-right ease 4s forwards; */
+    }
+}
+
+@keyframes img-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

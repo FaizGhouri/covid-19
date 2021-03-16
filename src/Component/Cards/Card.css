@@ -1,0 +1,84 @@
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow-left {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.Grid{
+    background-image: linear-gradient(to right, black 10%, rgb(7, 124, 7) 130%);
+
+}
+
+.Death{
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+    animation-delay: 0.4s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    width: 265px;
+   
+    border-radius: 10px;
+    box-sizing: border-box; 
+}
+
+@font-face{
+    font-family: 'Teko';
+    src: url('../../Font/Teko-Regular.ttf');
+}
+
+.font{
+    color: red;
+    font-weight: bold;
+    font-family: 'Teko';
+    font-size: 25px;
+    height: 15px;
+    
+}
+
+.vari{
+    color: white;
+    font-size: 0px;
+}
+
+.fire{
+    color: blue;
+    font-weight: bold;
+    font-family: 'Teko';
+    font-size: 25px;
+    height: 15px;
+}
+
+.fao{
+    color: green;
+    font-weight: bold;
+    font-family: 'Teko';
+    font-size: 25px;
+    height: 15px;
+}
+
+.countUp{
+    font-size: 40px;
+}
