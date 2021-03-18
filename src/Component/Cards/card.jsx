@@ -2,12 +2,9 @@ import React from 'react';
 import './Card.css'
 import { CardContent, Typography } from '@material-ui/core';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import { start } from 'countup';
 
 const Paper = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 
-    console.log(confirmed, "Confirmed Data")
 
     if (!confirmed) {
         return 'Loading....'

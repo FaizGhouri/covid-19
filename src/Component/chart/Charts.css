@@ -1,6 +1,7 @@
 .chart {
     width: 90%;
     border: 5px;
+    margin-top: 50px;
 }
 
 .LineChart {
@@ -10,4 +11,9 @@
     justify-content: center;
     align-items: center;
     justify-self: center;
+    width: 100%;
+}
+
+.global {
+    width: 100%;
 }

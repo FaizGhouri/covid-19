@@ -14,6 +14,7 @@ class App extends React.Component {
 
     state = {
         data: {},
+        GLobalData: {},
         country: '',
     }
 
@@ -26,6 +27,8 @@ class App extends React.Component {
 
 
         this.setState({ data: Data });
+
+        this.setState({GLobalData : Data})
     }
 
 
@@ -39,9 +42,8 @@ class App extends React.Component {
 
     render() {
 
-        const { data, country } = this.state
+        const { data, country ,GLobalData } = this.state
 
-        console.log(data, "Covid")
 
         return (
 
@@ -51,20 +53,28 @@ class App extends React.Component {
 
                     <Logo />
 
-                    <Paper data = { data }/>
-
-
                 </div>
+                
 
-                <LineDemo />
+                <LineDemo GLobalData={GLobalData}/>
 
+                
                 <Country handleCountryChange = { this.handleCountryChange }/>
 
-                <CountryChart data={data} country={country} />
+                 
+                <Paper data = { data }/>
+
+
+
+                <CountryChart data = { data } country = { country }/>
+
 
             </div>
+
         );
+
     }
+
 
 }
 
